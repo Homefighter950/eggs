@@ -6,7 +6,7 @@
     },
     "exported_at": "2023-05-17T23:20:29+01:00",
     "name": "Fabric",
-    "author": "accounts@bofanodes.io",
+    "author": "justin@fwsites.de",
     "description": "Fabric is a modular modding toolchain targeting Minecraft 1.14 and above, including snapshots.",
     "features": [
         "eula",
@@ -15,10 +15,15 @@
     ],
     "docker_images": {
         "Java 8": "ghcr.io\/pterodactyl\/yolks:java_8",
+        "Java 9": "ghcr.io\/pterodactyl\/yolks:java_9",
+        "Java 10": "ghcr.io\/pterodactyl\/yolks:java_10",
         "Java 11": "ghcr.io\/pterodactyl\/yolks:java_11",
         "Java 16": "ghcr.io\/pterodactyl\/yolks:java_16",
         "Java 17": "ghcr.io\/pterodactyl\/yolks:java_17",
-        "Java 18": "ghcr.io\/pterodactyl\/yolks:java_18"
+        "Java 18": "ghcr.io\/pterodactyl\/yolks:java_18",
+        "Java 19": "ghcr.io\/pterodactyl\/yolks:java_19",
+        "Java 20": "ghcr.io\/pterodactyl\/yolks:java_20",
+        "Java 21": "ghcr.io\/pterodactyl\/yolks:java_21",
     },
     "file_denylist": [],
     "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}",
@@ -38,7 +43,7 @@
     "variables": [
         {
             "name": "Server Jar File",
-            "description": "The name of the server jarfile to run the server with.",
+            "description": "Der Name der Server.jar Datei",
             "env_variable": "SERVER_JARFILE",
             "default_value": "server.jar",
             "user_viewable": true,
@@ -48,7 +53,7 @@
         },
         {
             "name": "Minecraft Version",
-            "description": "The version of Minecraft to install. Use \"latest\" to install the latest version, or use \"snapshot\" to install the latest snapshot.",
+            "description": "Die zu installierende Version von Minecraft. Verwenden Sie \"latest\", um die neueste Version zu installieren, oder verwenden Sie \"snapshot\", um den neuesten Snapshot zu installieren.",
             "env_variable": "MC_VERSION",
             "default_value": "latest",
             "user_viewable": true,
@@ -58,7 +63,7 @@
         },
         {
             "name": "Fabric Version",
-            "description": "The version of Fabric to install.",
+            "description": "Welche Fabric Version soll installiert werden?",
             "env_variable": "FABRIC_VERSION",
             "default_value": "latest",
             "user_viewable": true,
@@ -68,7 +73,7 @@
         },
         {
             "name": "Fabric Loader Version",
-            "description": "The version of Fabric Loader to install.",
+            "description": "https://meta.fabricmc.net/v2/versions/installer",
             "env_variable": "LOADER_VERSION",
             "default_value": "latest",
             "user_viewable": true,
